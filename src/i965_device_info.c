@@ -75,7 +75,8 @@ static struct hw_codec_info g4x_hw_codec_info = {
     .min_linear_hpitch = 4,
 
     .has_mpeg2_decoding = 1,
-
+    .has_h264_decoding = 1,
+    // Enable h264 decoding for i965 driver
     .num_filters = 0,
 };
 
@@ -1096,6 +1097,9 @@ const static char *gen7_cpu_hook_list[] =  {
     "Intel(R)Pentium(R)CPUG2120T",
     "Intel(R)Pentium(R)CPUG2130",
     "Intel(R)Pentium(R)CPUG2140",
+    "Intel(R)Celeron(R)CPU1007U",
+    "Intel(R)Celeron(R)CPU1037U",
+    "Intel(R)Pentium(R)CPUG2130"
 };
 
 static void gen7_hw_codec_preinit(VADriverContextP ctx, struct hw_codec_info *codec_info)
